@@ -8,7 +8,7 @@
 - 공부한 내용 본인의 언어로 정리하기
     * 코틀린으로 하면 솔직히 좀 간단한 것 같음ㅋㅋㅋ.....
 
-
+```
     class Solution {
         fun solution(n: Long): IntArray {
             return n.toString()
@@ -17,6 +17,7 @@
                 .toIntArray()
         }
     }
+```
 
 - 오늘의 회고
   * 예전 기억이 떠올라서 나누기 10해서 하는 방식 하려다가
