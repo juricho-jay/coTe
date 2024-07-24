@@ -51,5 +51,34 @@ class Solution {
     * 업무
     - 로그 세팅 파일좀 열어봐야지
 
+    ### 99클럽 코테 스터디 3일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 모 아니면 도 라는 식으로 리턴될 땐 모로 선언하고 도일 때만 바꿔주기
+- 공부한 내용 본인의 언어로 정리하기
+    * 코틀린은 when이 참 좋아요
+
+```
+class Solution {
+    fun solution(s: String): Boolean {
+        var pCount = 0
+        var yCount = 0
+
+        val lowerCaseString = s.toLowerCase()
+
+        for (char in lowerCaseString) {
+            when (char) {
+                'p' -> pCount++
+                'y' -> yCount++
+            }
+        }
+
+        return pCount == yCount
+    }
+}
+```
+
+- 오늘의 회고
+    * 아 회사 코드 다 때려부시고 싶다
+
 
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
