@@ -92,6 +92,32 @@ class Solution {
     * 동시성 처리하고싶은데 디비에 바로 커넥트해서 업뎃/인서트하니까 문제가 있다아아 근데 레디스가 없어어어
     * 근데 임베디드 레디스로 어떻게든 해결해보고 싶은데
     * 용량 다이죠부일까
+ 
+  
+### 99클럽 코테 스터디 5일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 모를 땐 for문 이중 돌렸겠지...
+- 공부한 내용 본인의 언어로 정리하기
+```
+class Solution {
+   fun solution(participant: Array<String>, completion: Array<String>): String {
+      participant.sort()
+      completion.sort()
+        
+         for (i in completion.indices) {
+            if (participant[i] != completion[i]) {
+               return participant[i]
+            }
+         }
+        
+         return participant[participant.size - 1]
+   }
+}
+```
+
+- 오늘의 회고
+  * array 잘 안써서 쩝
+
 
 
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
