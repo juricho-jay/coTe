@@ -119,5 +119,26 @@ class Solution {
   * array 잘 안써서 쩝
 
 
+### 99클럽 코테 스터디 6일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 문제 이해하는게 점점 더 ...
+- 공부한 내용 본인의 언어로 정리하기
+```
+fun solution(nums: IntArray): Int {
+    val max = nums.size / 2
+    val uniqueNumbers = nums.toSet()
+
+    return if (max > uniqueNumbers.size) {
+        uniqueNumbers.size
+    } else {
+        max
+    }
+}
+```
+
+- 오늘의 회고
+  코틀린 됴아아
+
+
 
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
