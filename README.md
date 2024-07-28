@@ -140,5 +140,28 @@ fun solution(nums: IntArray): Int {
   코틀린 됴아아
 
 
+### 99클럽 코테 스터디 7일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 배열을 너무 안썼더니;;;;
+- 공부한 내용 본인의 언어로 정리하기
+```
+class Solution {
+    fun solution(arr: IntArray): IntArray {
+        val result = mutableListOf<Int>()
+        
+        for (i in arr.indices) {
+            if (i == 0 || arr[i] != arr[i - 1]) {
+                result.add(arr[i])
+            }
+        }
+        
+        return result.toIntArray()
+    }
+}
+```
+
+- 오늘의 회고
+  * 아니, 배열 리스트로 바꾸고 리스트 배열로 바꾸는게 왜이렇게 귀찮냐
+  
 
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
