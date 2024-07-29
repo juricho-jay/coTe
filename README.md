@@ -162,6 +162,60 @@ class Solution {
 
 - 오늘의 회고
   * 아니, 배열 리스트로 바꾸고 리스트 배열로 바꾸는게 왜이렇게 귀찮냐
+ 
+
+### 99클럽 코테 스터디 8일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 스택/큐 오랜만!
+- 공부한 내용 본인의 언어로 정리하기
+   * 코틀린에서는 deque를 쓴다는디?
+  
+```
+class Solution {
+    fun solution(s: String): Boolean {
+        val stack = ArrayDeque<Char>()
+        for (item in s) {
+            when (item) {
+                '(' -> stack.addLast(item)
+                ')' -> {
+                    if (stack.isEmpty()) {
+                        return false
+                    } else {
+                        stack.removeLast()
+                    }
+                }
+            }
+        }
+        return stack.isEmpty()
+    }
+}
+```
+
+- 오늘의 회고
+  * deque, arrayDeque 공부좀 해봐야할듯
+
+```
+import java.util.*;
+
+class Solution {
+    boolean solution(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (char item : s.toCharArray()) {
+            if (item == '(') {
+                stack.push(item);
+            } else {
+                if (stack.isEmpty()) {
+                    return false;
+                } 
+                
+                stack.pop();
+            }
+        }
+        
+        return stack.isEmpty();
+    }
+}
+```
   
 
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
