@@ -235,6 +235,26 @@ class Solution {
 
 - 오늘의 회고
   * 다시 정리 예정
+ 
+### 99클럽 코테 스터디 12일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * StringBuilder / StringBuffer
+- 공부한 내용 본인의 언어로 정리하기
+코틀린
+```
+
+class Solution {
+    fun solution(s: String): String {
+        return s.toCharArray()
+            .sortedArrayDescending()
+            .concatToString()
+    }
+}
+```
+
+- 오늘의 회고
+  * 난 이제 늙어서 reverse()를 안쓰고 for문 돌리는 건 못하겠다.
+  * StringBuilder/StringBuffer 차이
 
   
 
