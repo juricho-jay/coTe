@@ -255,6 +255,35 @@ class Solution {
 - 오늘의 회고
   * 난 이제 늙어서 reverse()를 안쓰고 for문 돌리는 건 못하겠다.
   * StringBuilder/StringBuffer 차이
+ 
+### 99클럽 코테 스터디 13일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 이진-이분탐색
+    *    작은 건 왼쪽 노드 하위로 큰건 오른쪽 노드 하위로
+- 공부한 내용 본인의 언어로 정리하기
+
+코틀린
+```
+
+fun searchBST(root: TreeNode?, val: Int): TreeNode? {
+    var currentNode = root
+
+    while (currentNode != null) {
+        if (currentNode.val == val) {
+            return currentNode
+        } else if (currentNode.val < val) {
+            currentNode = currentNode.right
+        } else {
+            currentNode = currentNode.left
+        }
+    }
+
+    return null
+}
+```
+
+- 오늘의 회고
+  * 트리노드 처음...
 
   
 
