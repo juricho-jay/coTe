@@ -285,6 +285,30 @@ fun searchBST(root: TreeNode?, val: Int): TreeNode? {
 - 오늘의 회고
   * 트리노드 처음...
 
+### 99클럽 코테 스터디 14일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 이진-이분탐색 또....
+- 공부한 내용 본인의 언어로 정리하기
+
+코틀린
+```
+
+class Solution {
+    fun isSymmetric(root: TreeNode?): Boolean {
+        return root == null || symmetricChecker(root.left, root.right)
+    }
+
+    private fun symmetricChecker(left: TreeNode?, right: TreeNode?): Boolean {
+        if (left == null && right == null) return true
+        if (left == null || right == null || left.`val` != right.`val`) return false
+        
+        return symmetricChecker(left.left, right.right) && symmetricChecker(left.right, right.left)
+    }
+}
+```
+
+- 오늘의 회고
+  * 이분탐색 좀 낯설다 근데 재밌네
   
 
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
