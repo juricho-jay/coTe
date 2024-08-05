@@ -309,6 +309,56 @@ class Solution {
 
 - 오늘의 회고
   * 이분탐색 좀 낯설다 근데 재밌네
+ 
+ 
+### 99클럽 코테 스터디 15일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 특별히 생각나는게 없이 그냥 for문과 배열들로 해결...
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+class Solution {
+    public int[] solution(int[] answers) {
+        int[] student1 = {1,2,3,4,5};
+        int[] student2 = {2,1,2,3,2,4,2,5};
+        int[] student3 = {3,3,1,1,2,2,4,4,5,5};
+        
+        int[] score = new int[3];
+        
+        for (int i = 0; i < answers.length; i++) {
+            if (answers[i] == student1[i%5]) {
+                score[0]++;
+            }
+            
+            if (answers[i] == student2[i%8]) {
+                score[1]++;
+            }
+            
+            if (answers[i] == student3[i%10]) {
+                score[2]++;
+            }
+        }
+        
+        int maxScore = Math.max(score[0], Math.max(score[1], score[2]));
+        
+        List<Integer> answer = new ArrayList<>();
+        
+        for (int i = 0; i < 3; i++) {
+            if (maxScore == score[i]) {
+                answer.add(i + 1);
+            }
+        }
+        
+        return answer.stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+    }
+}
+```
+
+- 오늘의 회고
+  * 배열좀 안썼으면 좋겠다
   
 
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
