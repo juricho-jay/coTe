@@ -360,5 +360,40 @@ class Solution {
 - 오늘의 회고
   * 배열좀 안썼으면 좋겠다
   
+### 99클럽 코테 스터디 16일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 이차원 배열 기억에서 끄집어내는 데 좀 걸림
+    * 하다가 너무 비효율적이어서 구글링
+- 공부한 내용 본인의 언어로 정리하기
 
+```
+
+class Solution {
+    public int solution(int[][] sizes) {
+        int answer = 0;
+         int temp = 0;
+        int maxW = 0; int maxH = 0;
+        
+        for (int i = 0; i < sizes.length; i++) {
+            if (sizes[i][0] < sizes[i][1]){
+                temp = sizes[i][0];
+                sizes[i][0] = sizes[i][1];
+                sizes[i][1] = temp;
+            }
+        }
+        
+        for (int i = 0; i < sizes.length; i++) {
+            maxW = Math.max(maxW, sizes[i][0]);
+            maxH = Math.max(maxH, sizes[i][1]);
+        }
+        
+        answer = maxW * maxH;
+        return answer;
+    }
+}
+```
+
+- 오늘의 회고
+  * ...후
+  
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
