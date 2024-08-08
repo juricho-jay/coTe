@@ -426,5 +426,43 @@ class Solution {
 
 - 오늘의 회고
   * 이건 구글링
+ 
+### 99클럽 코테 스터디 18일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 바이너리 트리 언제까지,,,
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+public class Solution {
+
+  private TreeNode head;
+  private TreeNode current;
+
+  public TreeNode increasingBST(TreeNode root) {
+    traverse(root);
+    return head;
+  }
+
+  private void traverse(TreeNode node) {
+    if (node == null) {
+      return;
+    }
+    traverse(node.left);
+    TreeNode n = new TreeNode(node.val); 
+    if (head == null) {
+      head = n;
+      current = n;
+    } else {
+      current.right = n;
+      current = current.right;
+    }
+    traverse(node.right); 
+  }
+}
+```
+
+- 오늘의 회고
+  * 구글링2
   
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
