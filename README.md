@@ -395,5 +395,36 @@ class Solution {
 
 - 오늘의 회고
   * ...후
+
+### 99클럽 코테 스터디 17일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 바이너리 트리 
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+    if (root == null) {
+      return Collections.emptyList();
+    }
+    List<Integer> result = new ArrayList<>();
+    travel(result, root);
+    return result;
+  }
+
+  private void travel(List<Integer> result, TreeNode root) {
+    if (root == null) {
+      return;
+    }
+    travel(result, root.left);
+    result.add(root.val);
+    travel(result, root.right);
+  }
+}
+```
+
+- 오늘의 회고
+  * 이건 구글링
   
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
