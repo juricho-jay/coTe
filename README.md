@@ -464,5 +464,32 @@ public class Solution {
 
 - 오늘의 회고
   * 구글링2
+ 
+
+### 99클럽 코테 스터디 19일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * greedy algorithm
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+import java.util.*;
+
+class Solution {
+    public int solution(int k, int m, int[] score) {
+        int answer = 0;
+        
+        Arrays.sort(score);
+        
+        for (int i = score.length - m; i >= 0; i -= m) {
+            answer += m * (score[i]);
+        }
+        return answer;
+    }
+}
+```
+
+- 오늘의 회고
+  
   
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
