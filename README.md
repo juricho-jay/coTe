@@ -490,6 +490,47 @@ class Solution {
 ```
 
 - 오늘의 회고
-  
+
+
+### 99클럽 코테 스터디 20일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * greedy algorithm
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Solution {
+    public int solution(int n, int[] lost, int[] reserve) {
+        Set<Integer> reserveSet = new HashSet<>();
+        Set<Integer> lostSet = new HashSet<>();
+        
+        for (int i : reserve) {
+            reserveSet.add(i);
+        }
+
+        for (int i : lost) {
+            if (!reserveSet.remove(i)) {
+                lostSet.add(i);
+            }
+        }
+
+        for (Integer i : reserveSet) {
+            if (lostSet.contains(i - 1)) {
+                lostSet.remove(i - 1);
+            } else if (lostSet.contains(i + 1)) {
+                lostSet.remove(i + 1);
+            }
+        }
+
+        return n - lostSet.size();
+    }
+}
+```
+
+- 오늘의 회고
+  * 배열 변환할 때 번거로움...중복 제거는 list보다 set이 낫겠구나
   
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
