@@ -532,5 +532,44 @@ class Solution {
 
 - 오늘의 회고
   * 배열 변환할 때 번거로움...중복 제거는 list보다 set이 낫겠구나
-  
+
+### 99클럽 코테 스터디 21일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 파스칼
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
+        // 0번째 배열을 제외하고는 모두 1을 양쪽에 가지고 있음
+        List<List<Integer>> answer = new ArrayList<>(numRows);
+
+        for (int i = 0; i < numRows; i++) {
+            List<Integer> innerList = new ArrayList<>(i + 1);
+            
+            if (i == 0) {
+                innerList.add(1);
+            } else {
+                for (int j = 0; j <= answer.size(); j++) {
+                    List<Integer> beforeList = answer.get(i - 1);
+
+                    if (j == 0 || j == answer.size()) {
+                        innerList.add(1);
+                    } else {
+                        innerList.add(beforeList.get(j - 1) + beforeList.get(j));
+                    }
+                }
+            }
+
+            answer.add(innerList);
+        }
+
+        return answer;
+    }
+}
+```
+
+- 오늘의 회고
+  * 이렇게 해도 되나 뭔가 속도 이슈가...
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
