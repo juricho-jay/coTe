@@ -572,4 +572,28 @@ class Solution {
 
 - 오늘의 회고
   * 이렇게 해도 되나 뭔가 속도 이슈가...
+
+### 99클럽 코테 스터디 22일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * array partition
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+class Solution {
+    public int arrayPairSum(int[] nums) {
+        Arrays.sort(nums);
+        int result = 0;
+
+        for (int num = 0; num < nums.length; num += 2){
+            result += nums[num];
+        }
+        
+        return result;
+    }
+}
+```
+
+- 오늘의 회고
+  * 런타임 속도가....;;
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
