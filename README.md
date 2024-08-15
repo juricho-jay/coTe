@@ -596,4 +596,23 @@ class Solution {
 
 - 오늘의 회고
   * 런타임 속도가....;;
+
+### 99클럽 코테 스터디 24일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 이차원 배열 
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+class Solution {
+    public int findCenter(int[][] edges) {
+        int a = edges[0][0], b = edges[0][1];
+        int c = edges[1][0], d = edges[1][1];
+        return a == c || a == d ? a : b;
+    }
+}
+```
+
+- 오늘의 회고
+  * 중복값 찾기
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
