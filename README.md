@@ -615,4 +615,55 @@ class Solution {
 
 - 오늘의 회고
   * 중복값 찾기
+
+### 99클럽 코테 스터디 25일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 그래프
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+
+class Solution {
+    public boolean validPath(int n, int[][] edges, int source, int destination) {
+        if(n == 1)
+            return true;
+        
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        Set<Integer> set = new HashSet<>(); 
+        LinkedList<Integer> queue = new LinkedList<>();
+        
+        for(int item[] : edges) {
+            if(!map.containsKey(item[0])) 
+                map.put(item[0], new LinkedList<>()); 
+            
+            if(!map.containsKey(item[1]))
+                map.put(item[1], new LinkedList<>()); 
+            
+            map.get(item[0]).add(item[1]);
+            map.get(item[1]).add(item[0]);
+        }
+        
+        queue.add(source); 
+        while(!queue.isEmpty()) {
+            int current = queue.remove();  
+            if(set.contains(current))
+                continue;
+            set.add(current); 
+            
+            List<Integer> neighbors = map.get(current); 
+            
+            for(int item : neighbors) {
+                if(item == destination)
+                    return true; 
+                queue.add(item); 
+            }
+        }
+        
+        return false;
+    }
+}
+```
+
+- 오늘의 회고
+  * 구글링...
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
