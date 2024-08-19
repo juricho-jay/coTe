@@ -666,4 +666,30 @@ class Solution {
 
 - 오늘의 회고
   * 구글링...
+ 
+### 99클럽 코테 스터디 29일차 TIL + 오늘의 학습 키워드
+- 오늘의 학습 키워드
+    * 이분탐색?
+- 공부한 내용 본인의 언어로 정리하기
+
+```
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+
+        // 1부터 n까지의 자연수 합 공식
+        int fullSum = n * (n + 1) / 2;
+
+        int numsSum = 0;
+        for (int num : nums) {
+            numsSum += num;
+        }
+
+        return fullSum - numsSum;
+    }
+}
+```
+
+- 오늘의 회고
+* 속도 중요햇
 필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
